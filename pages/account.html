@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals - Clovers</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <main class="account-page">
+        <div class="account-header">
+            <div class="profile-info">
+                <div class="profile-circle">Profile</div>
+                <h1>Omkar Zende</h1>
+            </div>
+        </div>
+    
+        <nav class="account-nav">
+            <a href="#my-addresses" class="nav-item">My Addresses</a>
+            <a href="#my-wallet" class="nav-item">My Wallet</a>
+            <a href="#my-subscriptions" class="nav-item">My Subscriptions</a>
+            <a href="#my-orders" class="nav-item">My Orders</a>
+            <a href="#my-wishlist" class="nav-item">My Wishlist</a>
+            <a href="#my-account" class="nav-item active">My Account</a>
+        </nav>
+    
+        <div class="account-content">
+            <div id="my-addresses" class="content-section" style="display: none;">
+                <h2>My Addresses</h2>
+                <p class="subtitle">Add and manage the addresses you use often.</p>
+                <div class="no-addresses">
+                    <p>You haven't saved any addresses yet.</p>
+                    <button class="add-address-btn" onclick="openAddressModal()">Add New Address</button>
+                </div>
+            </div>
+    
+            <div id="my-account" class="content-section" style="display: block;">
+                <h2>My Account</h2>
+                <p class="subtitle">Update your account details and preferences.</p>
+                <form class="account-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>* First name</label>
+                            <input type="text" value="Omkar" required>
+                        </div>
+                        <div class="form-group">
+                            <label>* Last name</label>
+                            <input type="text" value="Zende" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>* Email</label>
+                        <input type="email" value="omkarzende@gmail.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>* Phone</label>
+                        <input type="tel" required>
+                    </div>
+                    
+                    <button type="submit" class="update-account">Update Account</button>
+                </form>
+            </div>
+
+
+          <div id="my-wallet" class="content-section" style="display: none;">
+    <h2>My Wallet</h2>
+    <p class="subtitle">Save your credit and debit card details for faster checkout.</p>
+    
+    <div class="no-cards">
+        <h3>You Haven't Saved Any Cards Yet</h3>
+        <p>Securely save your payment details when you place an order at checkout.</p>
+    </div>
+</div>
+<div id="my-subscriptions" class="content-section" style="display: none;">
+    <h2>Subscriptions</h2>
+    <p class="subtitle">View and manage the subscriptions you've purchased.</p>
+    
+    <div class="no-subscriptions">
+        <h3>No purchased subscriptions</h3>
+        <p>When you purchase a subscription, it'll appear here.</p>
+    </div>
+</div>
+
+<div id="my-orders" class="content-section" style="display: none;">
+    <h2>My Orders</h2>
+    <p class="subtitle">View your order history or check the status of a recent order.</p>
+    
+    <div class="no-orders">
+        <h3>You haven't placed any orders yet.</h3>
+        <a href="#" class="start-browsing">Start Browsing</a>
+    </div>
+</div>
+
+<div id="my-wishlist" class="content-section" style="display: none;">
+    <h2>My Wishlist</h2>
+    <p class="subtitle">View favorite products you've saved to your wishlist.</p>
+    
+    <div class="no-wishlist">
+        <h3>You haven't added any products yet.</h3>
+        <a href="#" class="start-adding">Start adding products</a>
+    </div>
+</div>
+
+
+
+
+            
+    
+            <!-- Other sections remain the same but with display: none -->
+            
+            <!-- Address Modal -->
+            <div id="addressModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add New Address</h2>
+                        <span class="close-modal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <form class="address-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>* First name</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>* Last name</label>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Company name</label>
+                                <input type="text">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input type="text">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Address - line 2</label>
+                                <input type="text" placeholder="Apartment, suite, floor">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select>
+                                        <option value="UK">United Kingdom</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Region</label>
+                                    <select>
+                                        <option value="">Select region</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Zip / Postal code</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel">
+                                </div>
+                            </div>
+                            
+                            <div class="checkbox-wrapper">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="defaultAddress">
+                                    <span>Make this my default address</span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="add-address">Add Address</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/js/components.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

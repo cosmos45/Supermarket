@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Clovers</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main class="cart-page">
+        <div class="cart-container">
+            <h1>My cart</h1>
+            
+            <div class="cart-content">
+                <div class="cart-items-container" id="cart-items-list">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+                
+                <div class="order-summary">
+                    <h2>Order summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">£0.00</span>
+                    </div>
+                    <div class="delivery-row">
+                        <a href="#" class="estimate-delivery">Estimate Delivery</a>
+                    </div>
+                    <div class="total-row">
+                        <span>Total</span>
+                        <span id="cart-total">£0.00</span>
+                    </div>
+                    <button class="checkout-button">Checkout</button>
+                    <div class="secure-checkout">
+                        <span>Secure Checkout</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-actions">
+                <div class="action-item">
+                    <div class="action-text">
+                        <i class="fas fa-tag"></i>
+                        <span>Enter a promo code</span>
+                    </div>
+                    <div class="input-container hidden">
+                        <div class="input-group">
+                            <input type="text" placeholder="e.g., SAVE50">
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-item">
+                    <div class="action-text">
+                        <i class="fas fa-pencil-alt"></i>
+                        <span>Add a note</span>
+                    </div>
+                    <div class="input-container hidden">
+                        <textarea placeholder="e.g., Leave outside the front door"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="/js/components.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
